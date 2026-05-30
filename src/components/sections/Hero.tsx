@@ -77,13 +77,13 @@ export function Hero() {
                 Contact Me
               </Link>
 
-              <Link
+              <a
                 href="/resume.pdf"
                 download
                 className="inline-flex h-12 w-full items-center justify-center rounded-full border border-border bg-background/50 px-6 text-sm font-semibold text-foreground transition hover:bg-muted sm:w-auto"
               >
                 Download Resume
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div

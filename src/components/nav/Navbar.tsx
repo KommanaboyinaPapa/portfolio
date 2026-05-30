@@ -71,12 +71,13 @@ export function Navbar() {
                 </Link>
               ))}
 
-              <Link
+              <a
                 href="/resume.pdf"
+                download
                 className="inline-flex items-center justify-center rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-[0_0_0_1px_rgba(255,255,255,0.03)] transition hover:border-ring/60 hover:bg-muted"
               >
                 Resume
-              </Link>
+              </a>
             </nav>
 
             <button
@@ -158,13 +159,14 @@ export function Navbar() {
               </div>
 
               <div className="border-t border-border p-4">
-                <Link
+                <a
                   href="/resume.pdf"
+                  download
                   className="inline-flex w-full items-center justify-center rounded-xl bg-foreground px-4 py-3 text-sm font-semibold text-background transition hover:opacity-95"
                   onClick={() => setOpen(false)}
                 >
                   Resume
-                </Link>
+                </a>
               </div>
             </motion.div>
           </motion.div>
@@ -173,4 +175,3 @@ export function Navbar() {
     </>
   );
 }
-
