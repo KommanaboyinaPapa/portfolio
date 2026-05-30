@@ -19,6 +19,24 @@ const groups: SkillGroup[] = [
   { title: "Tools", items: ["Git", "GitHub", "VS Code"] },
 ];
 
+type SkillProgress = {
+  name: string;
+  percent: number;
+};
+
+const progressSkills: SkillProgress[] = [
+  { name: "React.js", percent: 90 },
+  { name: "Next.js", percent: 85 },
+  { name: "Node.js", percent: 85 },
+  { name: "Express.js", percent: 80 },
+  { name: "MongoDB", percent: 80 },
+  { name: "MySQL", percent: 75 },
+  { name: "JavaScript", percent: 90 },
+  { name: "Java", percent: 75 },
+  { name: "Python", percent: 80 },
+  { name: "Tailwind CSS", percent: 85 },
+];
+
 const ease = [0.22, 1, 0.36, 1] as const;
 
 function SkillCard({ group, index }: { group: SkillGroup; index: number }) {
@@ -65,6 +83,50 @@ function SkillCard({ group, index }: { group: SkillGroup; index: number }) {
   );
 }
 
+function ProgressRow({
+  skill,
+  index,
+}: {
+  skill: SkillProgress;
+  index: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.35 }}
+      transition={{ duration: 0.6, ease, delay: index * 0.03 }}
+      className="group rounded-2xl border border-border bg-card p-4 transition-colors hover:border-ring/60 sm:p-5"
+    >
+      <div className="flex items-center justify-between gap-4">
+        <p className="text-sm font-semibold tracking-tight">{skill.name}</p>
+        <p className="text-xs font-medium tracking-widest text-muted-foreground">
+          {skill.percent}%
+        </p>
+      </div>
+
+      <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-background/40">
+        <motion.div
+          initial={{ width: "0%" }}
+          whileInView={{ width: `${skill.percent}%` }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1.1, ease, delay: 0.05 }}
+          className="h-full rounded-full bg-gradient-to-r from-sky-400 via-violet-400 to-emerald-400 shadow-[0_0_22px_rgba(56,189,248,0.25)]"
+        />
+      </div>
+
+      <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
+        <span className="opacity-70 transition-opacity group-hover:opacity-100">
+          Beginner
+        </span>
+        <span className="opacity-70 transition-opacity group-hover:opacity-100">
+          Advanced
+        </span>
+      </div>
+    </motion.div>
+  );
+}
+
 export function Skills() {
   return (
     <section id="skills" className="scroll-mt-24 py-16 sm:py-24">
@@ -105,8 +167,36 @@ export function Skills() {
             <SkillCard key={group.title} group={group} index={idx} />
           ))}
         </div>
+
+        <div className="mt-12">
+          <div className="mx-auto max-w-3xl text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.6, ease }}
+              className="text-xs font-medium tracking-widest text-muted-foreground"
+            >
+              PROFICIENCY
+            </motion.p>
+            <motion.h3
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.7, ease }}
+              className="mt-3 text-balance text-2xl font-semibold tracking-tight sm:text-3xl"
+            >
+              Animated skill progress
+            </motion.h3>
+          </div>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {progressSkills.map((s, idx) => (
+              <ProgressRow key={s.name} skill={s} index={idx} />
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   );
 }
-
