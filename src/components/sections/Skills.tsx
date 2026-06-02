@@ -154,7 +154,7 @@ export function Skills() {
             transition={{ duration: 0.7, ease, delay: 0.02 }}
             className="mt-6 text-pretty leading-7 text-muted-foreground"
           >
-            Cinematic glass cards, modern hierarchy, and progress that animates
+            Premium glass cards, modern hierarchy, and progress that animates
             on view.
           </motion.p>
         </div>

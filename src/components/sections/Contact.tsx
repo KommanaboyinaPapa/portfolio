@@ -14,7 +14,7 @@ const formspreeEndpoint = "https://formspree.io/f/xbdbbnlr";
 
 // Update these when ready
 const githubUrl: string = "https://github.com/KommanaboyinaPapa";
-const linkedInUrl: string = "#";
+const linkedInUrl: string = "https://www.linkedin.com/in/your-linkedin-profile";
 
 export function Contact() {
   const [name, setName] = useState("");
@@ -110,11 +110,11 @@ export function Contact() {
                 CONTACT
               </p>
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-                Let&apos;s build something cinematic.
+                Let&apos;s build something together.
               </h2>
               <p className="mt-6 text-pretty leading-7 text-muted-foreground">
-                Reach out anytime — I&apos;m happy to discuss opportunities,
-                collaborations, or freelance work.
+                Reach out anytime — I&apos;m happy to discuss projects, collaborations,
+                or internship opportunities.
               </p>
 
               <div className="mt-8 grid gap-4">
@@ -123,10 +123,10 @@ export function Contact() {
                     PHONE
                   </p>
                   <a
-                    href={`tel:${phone}`}
+                    href="tel:+919985825548"
                     className="mt-2 inline-flex text-sm font-semibold text-foreground transition-colors hover:text-foreground/90"
                   >
-                    {phone}
+                    9985825548
                   </a>
                 </div>
 
@@ -141,11 +141,39 @@ export function Contact() {
                     {email}
                   </a>
                 </div>
+
+                <div className="rounded-[2rem] border border-border bg-background/20 p-5 backdrop-blur-xl">
+                  <p className="text-[11px] font-medium tracking-[0.25em] text-muted-foreground">
+                    GITHUB
+                  </p>
+                  <a
+                    href={githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex break-all text-sm font-semibold text-foreground transition-colors hover:text-foreground/90"
+                  >
+                    github.com/KommanaboyinaPapa
+                  </a>
+                </div>
+
+                <div className="rounded-[2rem] border border-border bg-background/20 p-5 backdrop-blur-xl">
+                  <p className="text-[11px] font-medium tracking-[0.25em] text-muted-foreground">
+                    LINKEDIN
+                  </p>
+                  <a
+                    href={linkedInUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex break-all text-sm font-semibold text-foreground transition-colors hover:text-foreground/90"
+                  >
+                    LinkedIn Profile
+                  </a>
+                </div>
               </div>
 
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <a
-                  href={`tel:${phone}`}
+                  href="tel:+919985825548"
                   className="group relative inline-flex h-12 w-full items-center justify-center overflow-hidden rounded-2xl bg-foreground px-5 text-sm font-semibold text-background shadow-[0_30px_90px_-70px_rgba(56,189,248,0.9)] transition hover:opacity-95"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-sky-400/0 via-sky-400/12 to-violet-400/0 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -159,35 +187,23 @@ export function Contact() {
                   Email Me
                 </a>
 
-                <Link
+                <a
                   href={githubUrl}
-                  aria-disabled={githubUrl === "#"}
-                  tabIndex={githubUrl === "#" ? -1 : undefined}
-                  className={[
-                    "inline-flex h-12 w-full items-center justify-center rounded-2xl border border-border bg-background/25 px-5 text-sm font-semibold text-foreground backdrop-blur-xl transition hover:border-ring/60 hover:bg-muted",
-                    githubUrl === "#" ? "cursor-not-allowed opacity-60" : "",
-                  ].join(" ")}
-                  onClick={(e) => {
-                    if (githubUrl === "#") e.preventDefault();
-                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 w-full items-center justify-center rounded-2xl border border-border bg-background/25 px-5 text-sm font-semibold text-foreground backdrop-blur-xl transition hover:border-ring/60 hover:bg-muted"
                 >
                   GitHub
-                </Link>
+                </a>
 
-                <Link
+                <a
                   href={linkedInUrl}
-                  aria-disabled={linkedInUrl === "#"}
-                  tabIndex={linkedInUrl === "#" ? -1 : undefined}
-                  className={[
-                    "inline-flex h-12 w-full items-center justify-center rounded-2xl border border-border bg-background/25 px-5 text-sm font-semibold text-foreground backdrop-blur-xl transition hover:border-ring/60 hover:bg-muted",
-                    linkedInUrl === "#" ? "cursor-not-allowed opacity-60" : "",
-                  ].join(" ")}
-                  onClick={(e) => {
-                    if (linkedInUrl === "#") e.preventDefault();
-                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 w-full items-center justify-center rounded-2xl border border-border bg-background/25 px-5 text-sm font-semibold text-foreground backdrop-blur-xl transition hover:border-ring/60 hover:bg-muted"
                 >
                   LinkedIn
-                </Link>
+                </a>
               </div>
             </div>
 

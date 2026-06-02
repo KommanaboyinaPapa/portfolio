@@ -20,7 +20,7 @@ export function Footer() {
                 PAPA • Aspiring Developer
               </p>
               <p className="text-xs text-muted-foreground">
-                Cinematic portfolio • recruiter-ready
+                Aspiring Developer • recruiter-ready
               </p>
             </div>
           </div>
