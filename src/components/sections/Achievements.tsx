@@ -6,16 +6,16 @@ import { Container } from "@/components/layout/Container";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const stats = [
-  { label: "Team Size Led", value: "15+", icon: "👥" },
-  { label: "Projects Shipped", value: "10+", icon: "🚀" },
-  { label: "Tech Decisions", value: "50+", icon: "⚡" },
+  { label: "Current CGPA", value: "9.07", icon: "🎓" },
+  { label: "Completed Internships", value: "2", icon: "💼" },
+  { label: "Core Projects", value: "6+", icon: "💻" },
 ];
 
 const highlights = [
-  "Spearheaded end-to-end architecture for scalable cloud-native products",
-  "Established engineering standards, code review workflows, and CI/CD pipelines",
-  "Mentored junior engineers and led hiring for technical roles",
-  "Drove cross-functional collaboration between product, design, and engineering",
+  "Pursuing B.Tech in Artificial Intelligence & Data Science at SRGEC with a CGPA of 9.07",
+  "Building responsive, high-performance web applications using the MERN stack and Next.js",
+  "Applying Machine Learning and AI fundamentals to solve practical data-driven problems",
+  "Gained hands-on experience through web development and AI/ML internships",
 ];
 
 export function Achievements() {
@@ -69,7 +69,7 @@ export function Achievements() {
             transition={{ duration: 0.7, ease }}
             className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl"
           >
-            Recognition for impact.
+            Growth & Milestones.
           </motion.h2>
 
           <motion.p
@@ -79,8 +79,7 @@ export function Achievements() {
             transition={{ duration: 0.7, ease, delay: 0.05 }}
             className="mt-4 text-pretty leading-7 text-muted-foreground"
           >
-            A career milestone that reflects leadership, technical depth, and the
-            ability to deliver at scale.
+            An honest overview of my academic foundation, project achievements, and practical skill development.
           </motion.p>
         </div>
 
@@ -133,9 +132,9 @@ export function Achievements() {
                     transition={{ duration: 0.5, ease, delay: 0.2 }}
                     className="inline-flex items-center gap-2 rounded-full border border-amber-500/25 bg-amber-500/10 px-3 py-1.5"
                   >
-                    <span className="text-sm">🏆</span>
+                    <span className="text-sm">🎓</span>
                     <span className="text-[11px] font-semibold tracking-wider text-amber-400">
-                      CAREER HIGHLIGHT
+                      STUDENT HIGHLIGHT
                     </span>
                   </motion.div>
 
@@ -148,10 +147,10 @@ export function Achievements() {
                     className="mt-5 text-balance text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl"
                   >
                     <span className="bg-gradient-to-r from-emerald-400 via-sky-400 to-violet-400 bg-clip-text text-transparent">
-                      Chief Technical Advisor
+                      Aspiring Full Stack Engineer
                     </span>
                     <br />
-                    <span className="text-foreground">— Adverk</span>
+                    <span className="text-foreground">— AI &amp; DS Student</span>
                   </motion.h3>
 
                   <motion.p
@@ -161,9 +160,7 @@ export function Achievements() {
                     transition={{ duration: 0.7, ease, delay: 0.2 }}
                     className="mt-4 max-w-lg text-pretty leading-7 text-muted-foreground"
                   >
-                    Trusted to guide technical decisions and drive scalable
-                    execution with a product-first mindset. Led engineering
-                    strategy from ideation to production-grade deployment.
+                    Dedicated to combining full-stack web technologies with AI and data-driven solutions. Actively building projects, exploring new architectures, and preparing for opportunities.
                   </motion.p>
 
                   {/* Key highlights */}
@@ -256,32 +253,32 @@ export function Achievements() {
                           />
                         </svg>
                       </div>
-                      <div className="text-sm font-semibold">Role Details</div>
+                      <div className="text-sm font-semibold">Student Profile</div>
                     </div>
 
                     <div className="mt-3 space-y-2.5 text-sm text-muted-foreground">
                       <div className="flex items-center justify-between">
                         <span className="text-muted-foreground/70">
-                          Position
+                          Status
                         </span>
                         <span className="font-medium text-foreground/90">
-                          Chief Technical Advisor
+                          B.Tech Student
                         </span>
                       </div>
                       <div className="h-px w-full bg-border/60" />
                       <div className="flex items-center justify-between">
                         <span className="text-muted-foreground/70">
-                          Company
+                          Specialization
                         </span>
                         <span className="font-medium text-foreground/90">
-                          Adverk
+                          AI &amp; Data Science
                         </span>
                       </div>
                       <div className="h-px w-full bg-border/60" />
                       <div className="flex items-center justify-between">
-                        <span className="text-muted-foreground/70">Focus</span>
+                        <span className="text-muted-foreground/70">College</span>
                         <span className="font-medium text-foreground/90">
-                          Technical Leadership
+                          SRGEC
                         </span>
                       </div>
                     </div>
@@ -296,12 +293,12 @@ export function Achievements() {
                     className="mt-4 flex flex-wrap gap-2"
                   >
                     {[
-                      "Leadership",
-                      "Architecture",
-                      "Scale",
-                      "Quality",
-                      "Strategy",
-                      "Mentorship",
+                      "Problem Solving",
+                      "Full Stack Dev",
+                      "Data Science",
+                      "AI & ML",
+                      "React & Next.js",
+                      "Continuous Learning",
                     ].map((tag, i) => (
                       <motion.span
                         key={tag}
