@@ -1,6 +1,5 @@
 export const siteConfig = {
-  name: "Premium Portfolio",
+  name: "PAPA • Developer",
   description:
-    "A premium, dark-themed portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
+    "Cinematic, recruiter-level portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
 } as const;
-

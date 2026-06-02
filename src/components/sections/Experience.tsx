@@ -55,7 +55,7 @@ function TimelineItem({
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.7, ease, delay: index * 0.05 }}
         whileHover={{ y: -4 }}
-        className="group relative overflow-hidden rounded-2xl border border-border bg-card p-5 transition-colors hover:border-ring/60 sm:p-6"
+        className="group relative overflow-hidden rounded-[2rem] border border-border bg-background/25 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] backdrop-blur-xl transition-colors hover:border-ring/60"
       >
         <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <div className="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-sky-400/12 blur-3xl" />
@@ -142,4 +142,3 @@ export function Experience() {
     </section>
   );
 }
-

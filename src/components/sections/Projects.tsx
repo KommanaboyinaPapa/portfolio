@@ -54,8 +54,8 @@ function ExternalButton({
     "inline-flex h-11 items-center justify-center rounded-full px-5 text-sm font-semibold transition";
   const styles =
     variant === "primary"
-      ? "bg-foreground text-background hover:opacity-95"
-      : "border border-border bg-card text-foreground hover:bg-muted";
+      ? "bg-foreground text-background shadow-[0_30px_90px_-70px_rgba(56,189,248,0.9)] hover:opacity-95"
+      : "border border-border bg-background/35 text-foreground backdrop-blur-xl hover:border-ring/60 hover:bg-muted";
 
   return (
     <a
@@ -83,7 +83,7 @@ function FeaturedProjectCard({
       viewport={{ once: true, amount: 0.35 }}
       transition={{ duration: 0.75, ease }}
       whileHover={{ y: -4 }}
-      className="group relative overflow-hidden rounded-3xl border border-border bg-card"
+      className="group relative overflow-hidden rounded-[2.75rem] border border-border bg-background/25 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] backdrop-blur-xl"
     >
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div className="absolute -left-28 -top-28 h-72 w-72 rounded-full bg-sky-400/14 blur-3xl" />
@@ -91,36 +91,36 @@ function FeaturedProjectCard({
       </div>
 
       <div className="relative grid gap-0 lg:grid-cols-12">
-        {/* Visual block */}
+        {/* Visual / premium lighting block */}
         <div className="relative lg:col-span-5">
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-400/15 via-transparent to-violet-400/15" />
-          <div className="relative flex h-full min-h-[220px] flex-col justify-end p-6 sm:p-8">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-background/40 px-3 py-1 text-xs font-medium tracking-widest text-muted-foreground">
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-400/18 via-transparent to-violet-400/16" />
+          <div className="relative flex h-full min-h-[260px] flex-col justify-end p-7 sm:p-10">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-background/35 px-4 py-2 text-xs font-medium tracking-[0.25em] text-muted-foreground backdrop-blur-xl">
               FEATURED
-              <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_18px_rgba(56,189,248,0.45)]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_18px_rgba(56,189,248,0.55)]" />
             </div>
-            <div className="mt-4 text-balance text-2xl font-semibold tracking-tight sm:text-3xl">
+            <div className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
               {project.title}
             </div>
-            <div className="mt-2 text-sm leading-6 text-muted-foreground">
-              Premium build • scalable UI • production-ready
+            <div className="mt-3 text-sm leading-6 text-muted-foreground">
+              High-impact project • production-ready UI • scalable architecture
             </div>
           </div>
         </div>
 
         {/* Content */}
         <div className="relative lg:col-span-7">
-          <div className="p-6 sm:p-8">
+          <div className="p-7 sm:p-10">
             <p className="text-pretty leading-7 text-muted-foreground">
               {project.description}
             </p>
 
             {project.highlights?.length ? (
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2">
                 {project.highlights.map((h) => (
                   <span
                     key={h}
-                    className="rounded-full border border-border/80 bg-background/35 px-3 py-1 text-xs text-muted-foreground"
+                    className="rounded-full border border-border bg-background/20 px-3 py-1 text-xs text-muted-foreground backdrop-blur"
                   >
                     {h}
                   </span>
@@ -128,10 +128,10 @@ function FeaturedProjectCard({
               </div>
             ) : null}
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {project.live ? (
                 <ExternalButton href={project.live} variant="primary">
-                  Live
+                  Live Demo
                 </ExternalButton>
               ) : null}
               {project.github ? (
@@ -140,7 +140,7 @@ function FeaturedProjectCard({
               <button
                 type="button"
                 onClick={() => onQuickPreview(project)}
-                className="inline-flex h-11 items-center justify-center rounded-full border border-border bg-background/45 px-5 text-sm font-semibold text-foreground transition hover:border-ring/60 hover:bg-muted"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-border bg-background/35 px-5 text-sm font-semibold text-foreground backdrop-blur-xl transition hover:border-ring/60 hover:bg-muted"
               >
                 Quick Preview
               </button>
@@ -160,7 +160,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       viewport={{ once: true, amount: 0.35 }}
       transition={{ duration: 0.7, ease, delay: index * 0.04 }}
       whileHover={{ y: -4 }}
-      className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-colors hover:border-ring/60"
+      className="group relative overflow-hidden rounded-[2rem] border border-border bg-background/25 p-7 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] backdrop-blur-xl transition-colors hover:border-ring/60"
     >
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div className="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-emerald-400/10 blur-3xl" />
@@ -168,7 +168,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </div>
 
       <div className="relative">
-        <p className="text-xs font-medium tracking-widest text-muted-foreground">
+        <p className="text-xs font-medium tracking-[0.25em] text-muted-foreground">
           PROJECT
         </p>
         <h3 className="mt-2 text-lg font-semibold tracking-tight">
@@ -183,7 +183,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.highlights.slice(0, 4).map((h) => (
               <span
                 key={h}
-                className="rounded-full border border-border/80 bg-background/35 px-3 py-1 text-xs text-muted-foreground"
+                className="rounded-full border border-border bg-background/20 px-3 py-1 text-xs text-muted-foreground backdrop-blur"
               >
                 {h}
               </span>
@@ -299,15 +299,15 @@ export function Projects() {
   const [preview, setPreview] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="scroll-mt-24 py-16 sm:py-24">
+    <section id="projects" className="scroll-mt-24 py-20 sm:py-28">
       <Container>
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease }}
-            className="text-xs font-medium tracking-widest text-muted-foreground"
+            className="text-xs font-medium tracking-[0.25em] text-muted-foreground"
           >
             PROJECTS
           </motion.p>
@@ -316,19 +316,19 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.7, ease }}
-            className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl"
+            className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl"
           >
-            Selected work with clean UI and scale-first thinking.
+            Full-width projects with a featured spotlight.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.7, ease, delay: 0.02 }}
-            className="mt-5 text-pretty leading-7 text-muted-foreground"
+            className="mt-6 text-pretty leading-7 text-muted-foreground"
           >
-            Premium cards, subtle motion, and a featured spotlight for the best
-            project.
+            Recruiter-friendly layout: clear impact, highlights, and immediate
+            access to Live/GitHub.
           </motion.p>
         </div>
 
