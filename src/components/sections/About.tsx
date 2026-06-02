@@ -25,16 +25,13 @@ export function About() {
               Built for scale, designed for clarity.
             </h2>
             <p className="mt-6 text-pretty leading-7 text-muted-foreground">
-              B.Tech AI &amp; Data Science student with a CGPA of{" "}
-              <span className="font-semibold text-foreground">8.98</span>.
-              Passionate about MERN development and building production-ready
-              systems with clean UX.
+              I am a B.Tech Artificial Intelligence and Data Science student at Seshadri Rao Gudlavalleru Engineering College with a CGPA of 9.07. I am currently learning and building projects in full-stack development using React.js, Next.js, Node.js, Express.js, MongoDB, and REST APIs. I enjoy creating practical projects that help me improve my skills and understand real-world software development.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
               {[
                 { k: "Degree", v: "B.Tech (AI & DS)" },
-                { k: "CGPA", v: "8.98" },
+                { k: "CGPA", v: "9.07" },
                 { k: "Focus", v: "MERN + Scale" },
               ].map((i) => (
                 <div
@@ -107,7 +104,7 @@ export function About() {
                 {[
                   {
                     title: "Education",
-                    meta: "B.Tech · AI & DS · CGPA 8.98",
+                    meta: "B.Tech · AI & DS · CGPA 9.07",
                     desc: "Strong fundamentals in data + systems, applied to web products.",
                   },
                   {

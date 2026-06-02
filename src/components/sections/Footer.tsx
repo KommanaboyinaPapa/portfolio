@@ -17,7 +17,7 @@ export function Footer() {
             </span>
             <div>
               <p className="text-sm font-semibold tracking-tight">
-                PAPA • Developer
+                PAPA • Aspiring Developer
               </p>
               <p className="text-xs text-muted-foreground">
                 Cinematic portfolio • recruiter-ready

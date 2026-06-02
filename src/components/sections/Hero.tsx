@@ -45,9 +45,9 @@ function useTypewriter(words: string[]) {
 
 export function Hero() {
   const typed = useTypewriter([
-    "Full Stack Developer",
-    "MERN Developer",
-    "AI & DS Student",
+    "B.Tech AI & Data Science Student",
+    "Aspiring Full Stack Developer",
+    "MERN Enthusiast",
   ]);
 
   return (
@@ -100,8 +100,7 @@ export function Hero() {
             </div>
 
             <p className="mt-6 max-w-2xl text-pretty text-base leading-7 text-muted-foreground sm:text-lg">
-              Building scalable web experiences and solving real-world problems
-              through modern development.
+              I am a B.Tech AI & Data Science student passionate about building real-world web applications, learning full-stack development, and improving my problem-solving skills through practical projects.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
